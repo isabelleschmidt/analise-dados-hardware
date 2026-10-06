@@ -1,4 +1,4 @@
-Simulação de Alertas de Hardware em R
+# Simulação de Alertas de Hardware em R
 
 Este script em R faz parte de um projeto acadêmico voltado ao monitoramento contínuo de componentes de hardware de servidores utilizados em ambientes de computação em nuvem por plataformas de e-commerce.
 
@@ -6,7 +6,7 @@ No projeto, os dados de monitoramento são obtidos por meio da biblioteca psutil
 
 A ideia é utilizar uma taxa média de eventos observada nos dados coletados para gerar uma simulação mensal e identificar períodos que apresentem uma quantidade de ocorrências acima do comportamento esperado.
 
-🎯 Objetivo do script
+# 🎯 Objetivo do script
 
 O script tem como principais objetivos:
 
@@ -51,8 +51,7 @@ simulacao_mensal <- rpois(
 A função rpois() gera valores aleatórios seguindo uma distribuição de Poisson, utilizando λ como taxa média de ocorrência.
 Dessa forma, o script cria uma representação simulada de como os eventos poderiam se distribuir ao longo de um mês de monitoramento.
 
-📉  Visualização
-
+# 📉  Visualização
 Para facilitar a visualização dos resultados, são selecionados os primeiros 300 minutos:
 
 amostra_grafico <- historico_hardware[1:300, ]
@@ -91,7 +90,7 @@ abline(
   lwd = 2
 )
 
-⚠️ Observação
+ # ⚠️ Observação
 
 A simulação não representa necessariamente falhas reais de hardware. O objetivo do script é testar uma abordagem estatística para identificação de ocorrências fora do padrão, utilizando como referência a taxa média observada nos dados de monitoramento.
 
